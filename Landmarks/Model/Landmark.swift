@@ -16,6 +16,7 @@ struct Landmark: Hashable, Codable, Identifiable {
     var state: String
     var description: String
     var isFavorite: Bool
+    var isFeatured: Bool
     
     var category: Category
     enum Category: String, CaseIterable, Codable {
@@ -29,11 +30,11 @@ struct Landmark: Hashable, Codable, Identifiable {
         Image(imageName)
     }
     
-    private var coodinates: Coordinates
+    private var coordinates: Coordinates
     var locationCoordinates: CLLocationCoordinate2D {
         CLLocationCoordinate2D(
-            latitude: coodinates.latitude,
-            longitude: coodinates.longitude)
+            latitude: coordinates.latitude,
+            longitude: coordinates.longitude)
     }
     
     struct Coordinates: Hashable, Codable {

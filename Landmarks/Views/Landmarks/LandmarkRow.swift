@@ -27,7 +27,7 @@ struct LandmarkRow: View {
     }
 }
 
-#Preview {
-    LandmarkRow(landmark: landmarks[1])
-        .previewLayout(.fixed(width: 300, height: 70))
-}
+//#Preview {
+//    LandmarkRow(landmark: landmarks[1])
+//        .previewLayout(.fixed(width: 300, height: 70))
+//}
